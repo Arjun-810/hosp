@@ -1,0 +1,78 @@
+
+
+body {
+  /* background: rgb(137,242,184);
+  background: linear-gradient(90deg, rgba(137,242,184,1) 40%, rgba(166,211,232,1) 64%); */
+	/* background-repeat: no-repeat; */
+	font-size: 18px;
+}
+/* .my-login-page .card-wrapper {
+	width: 400px;
+} */
+
+ .doc-login {
+	border-color: transparent;
+	box-shadow: 0 4px 8px rgba(0,0,0,.05);
+	margin: 100px 0;
+}
+.center{
+  text-align: center;
+}
+.doc-login.fat{
+  background-color: rgb(253, 252, 251);
+}
+.doc-login.fat {
+	padding: 50px 150px;
+	/* border-radius: 15px; */
+}
+
+  .doc-login .doc-login-title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 180%;
+    letter-spacing: 2px;
+    font-family: 'Righteous', cursive;
+
+  }
+
+
+.btn.btn-block {
+  padding: 12px 10px;
+  background-color: rgb(174, 194, 103);
+	transition: all 0.5s;
+	border-radius: 20px;
+	border: none;
+	font-weight: bold;
+}
+.btn.btn-block:hover {background: rgb(177,142,181);
+	background: linear-gradient(90deg, rgba(177,142,181,1) 15%, rgba(167,222,219,1) 63%);
+
+	border: 1px solid black ;
+
+}
+.inp{
+	border: none;
+	border-bottom: 1px solid rgb(151, 150, 150);
+	outline: none;
+	border-radius: 0;
+}
+
+.footer {
+	margin: 40px 0;
+	color: black;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+
+  .doc-login.fat {
+    padding: 10px 0px;
+    /* border-radius: 15px; */
+  }
+
+	.doc-login.fat .doc-login-body {
+		padding: 15px;
+	}
+}

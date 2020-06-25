@@ -1,0 +1,63 @@
+
+
+body {
+	background: rgb(196,212,208);
+	background: linear-gradient(90deg, rgba(196,212,208,1) 21%, rgba(182,233,221,1) 86%);
+	/* background-size: cover; */
+	/* background-repeat: no-repeat; */
+	font-size: 18px;
+}
+.card {
+	/* border-color: transparent; */
+	border-radius: 25px;
+	box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+	/* margin: 100px 0; */
+}
+
+.card.app-fat {
+	padding: 15px;
+	border-radius: 25px;
+	box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+}
+
+.card .app-card-title {
+	/* margin-bottom: 30px; */
+	text-align: center;
+	font-size: 180%;
+	letter-spacing: 2px;
+	font-family: 'Righteous', cursive;
+	/* background-color: blanchedalmond	; */
+
+}
+.inp{
+	border: none;
+	border-bottom: 1px solid rgb(151, 150, 150);
+	outline: none;
+	border-radius: 0;
+}
+
+.footer {
+	margin: 40px 0;
+	color: black;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+	.card-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.card.fat {
+		padding: 0;
+	}
+
+	.card.fat .card-body {
+		padding: 15px;
+	}
+}

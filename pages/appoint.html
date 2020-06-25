@@ -1,0 +1,62 @@
+<section ng-controller="appointController">
+    <div class="container" style="margin-top: 80px; margin-bottom: 80px;">
+        <div class="row justify-content-md-center">
+            <div class="card app-fat">
+                <div class="card-body">
+                    <h4 class="app-card-title"><i class="fas fa-hospital fa-2x"></i> BOOK YOUR APPOINMENT</h4>
+                    <div>
+                        <div class="row row-content">
+                            <div class="col-12 col-md-6 mt-4">
+                                <div for="First_name"><i class="fas fa-user-circle"></i> First Name</div>
+                                <input type="text" class="inp mt-2" id="First_name_app" ng-model="appointFnam" placeholder="Enter First name"
+                                    required>
+                            </div>
+                            <div class="col-12 col-md-6 mt-4">
+                                <div for="Last_name"><i class="far fa-user"></i> Last Name</div>
+                                <input type="text" class="inp mt-2" id="Last_name_app" ng-model="appointLnam" placeholder="Enter Last name"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="row row-content">
+                            <div class="col-12 col-md-5 mt-4">
+                                <div for="problem"><i class="fas fa-envelope-square"></i> Problem</div>
+                            </div>
+                            <div class="col-12 col-md-7 mt-4">
+                                <input type="text" class="inp mt-2" id="patient_problem"
+                                    placeholder="Mention your problem" ng-model="patient_problem" required>
+                            </div>
+                        </div>
+                        <div class="row row-content">
+                            <div class="col-12 col-md-5 mt-4">
+                                <div for="Ext_disease"><i class="fas fa-redo-alt"></i> Existing Disease</div>
+                            </div>
+                            <div class="col-12 col-md-7 mt-4">
+                                <input type="text" class="inp mt-2" id="permanent_problem"
+                                    placeholder="Your Permanent Disease" ng-model="previous_problem" required>
+                            </div>
+                        </div>
+                        <div class="row row-content">
+                            <div class="col-12 col-md-6 mt-4">
+                                <div for="Age"><i class="fas fa-user-clock"></i> Appointment Date</div>
+                                <input type="date" class="inp mt-2" id="app_date" ng-model="appointDate" required>
+                            </div>
+                            <div class="col-12 col-md-6 mt-4">
+                                <div for="Gender"><i class="fas fa-stopwatch"></i> Appoitment Time</div>
+                                <input type="time" class="inp mt-2" id="app_time" ng-model="appointTime" required>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <!-- <input class="btn btn-block btn-warning" type="button" onclick="validation()">Register</input> -->
+                            <input class="btn btn-block btn-warning" type="submit" name="submit"
+                                value="Book Appointment" ng-click="appointPatient(patient_problem, previous_problem, appointDate, appointTime)">
+                        </div>
+
+                        <div class="mt-4 text-center">
+                            Back to<a href="patient-dashbord.html"> Patient Dashbord</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,90 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.nav1{
+    background-color: rgb(117, 203, 230);
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.nav2{
+    background-color: rgb(251, 254, 255);
+    font-size: 130%;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(10, 10, 10);
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav2 li:hover{
+    color: rgb(117, 203, 230);
+}
+/* .img-fluid {
+    max-width: 100%;
+    height: 70vh;
+  } */
+.section1{
+    background-image: url("images/physician-finder-banner-photo.png");
+    background-size: cover;
+}
+.section1 h1{
+    font-weight: bold;
+}
+.section1 section{
+    padding: 70px;
+}
+.section-text{
+    background-color: rgba(245, 235, 235, 0.5);
+    padding: 20px;
+    width: 60%;
+    margin-top: 2%;
+}
+.text1{
+    font-size: 140%;
+    font-weight: bold;
+    padding: 5px 0;
+    text-decoration: underline;
+}
+.btn-learn{
+    background-color: rgb(117, 203, 230);
+    color: white;
+    font-size: 120%;
+    font-weight: bold;
+}
+.section2{
+    text-align: center;
+    margin: 100px 0;
+    padding: 70px 0;
+}
+.sec2{
+    background-color: rgb(226, 221, 221);
+}
+.emergency{
+    padding: 50px 0;
+    margin: 50px 0;
+    background-color: rgb(236, 234, 234);
+}
+footer{
+    background-color: rgb(117, 203, 230);
+    padding: 50px 0;
+}
+.foot2{
+    text-align: center;
+    padding-top: 30px;
+    font-weight: bold;
+}
+.fa-check{
+    color: green;
+}
+.sec2 i{
+    color: rgb(117, 203, 230);
+}
+@media only screen and (max-width: 600px) {
+    .section-text{
+        width: 100%;
+        padding: 20px;
+    }
+    .section1 section{
+        padding: 10px;
+    }
+  }

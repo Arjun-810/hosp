@@ -1,0 +1,40 @@
+<div class="container contain bg" ng-controller="sixthController">
+  <header>Manager Login</header>
+    <div class="input-field">
+      <input type="text" ng-model="mloginEmail" id="managerLoginUserNam" onfocusout="managerLoginUserNam()" required>
+      <br><span style="color: red;" id="managerLoginUserMsg"></span>
+      <label>Email or Username</label>
+    </div>
+    
+    <div class="input-field">
+      <input class="pswrd" type="password" ng-model="mloginpswrd" id="managerLoginUserPswrd" onfocusout="managerLoginUserPswrd()" required>
+      <br><span style="color: red;" id="managerLoginpswrdMsg"></span>
+      <span class="show">SHOW</span>
+      <label>Password</label>
+    </div>
+    <div class="button">
+      <div class="inner">
+      </div>
+      <button ng-click="mlogin(mloginEmail, mloginpswrd)">LOGIN</button>
+      <!-- <input type="submit" ng-click="mlogin(mloginEmail, mloginpswrd)"> -->
+    </div>
+    <div class="text-center">
+     Back to <a ui-sref="Home()">Home</a> Page
+     </div>
+
+    <script>
+      var input = document.querySelector('.pswrd');
+      var show = document.querySelector('.show');
+      show.addEventListener('click', active);
+      function active() {
+        if (input.type === "password") {
+          input.type = "text";
+          show.style.color = "#1DA1F2";
+          show.textContent = "HIDE";
+        } else {
+          input.type = "password";
+          show.textContent = "SHOW";
+          show.style.color = "#111";
+        }
+      }
+    </script>

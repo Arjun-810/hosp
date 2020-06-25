@@ -1,0 +1,91 @@
+
+
+body {
+	/* background-size: cover; */
+	/* background-repeat: no-repeat; */
+	font-size: 18px;
+}
+/* .my-login-page .card-wrapper {
+	width: 400px;
+} */
+
+.card {
+	border-color: transparent;
+	box-shadow: 5px 4px 8px  rgba(0,0,0);
+	margin: 100px 0;
+	/* background-color: rgb(241, 237, 230); */
+}
+
+.card.fat {
+	padding: 30px;
+	border-radius: 15px;
+}
+
+.card .card-title {
+	margin-bottom: 30px;
+	text-align: center;
+	font-size: 180%;
+	letter-spacing: 2px;
+	font-family: 'Righteous', cursive;
+
+}
+
+.form-control {
+	border-width: 2.3px;
+}
+
+.form-group label {
+	width: 100%;
+}
+
+.btn.btn-block {
+	padding: 12px 10px;
+	background: rgb(167,222,219);
+	background: linear-gradient(90deg, rgba(167,222,219,1) 25%, rgba(177,142,181,1) 53%);
+	transition: all 0.5s;
+	border-radius: 10px;
+	border: none;
+	font-weight: bold;
+}
+.btn.btn-block:hover {background: rgb(177,142,181);
+	background: linear-gradient(90deg, rgba(177,142,181,1) 15%, rgba(167,222,219,1) 63%);
+
+	border: 1px solid black ;
+
+}
+.inp{
+	border: none;
+	border-bottom: 1px solid rgb(151, 150, 150);
+	outline: none;
+	border-radius: 0px;
+	padding: 10px;
+}
+
+.footer {
+	margin: 40px 0;
+	color: black;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.bg{
+	background-color: rgb(202, 230, 230);
+	/* padding: 100px; */
+	height: 95vh;
+}
+@media screen and (max-width: 425px) {
+	.card-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.card.fat {
+		padding: 0;
+	}
+
+	.card.fat .card-body {
+		padding: 15px;
+	}
+}

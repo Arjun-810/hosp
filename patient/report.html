@@ -1,0 +1,60 @@
+
+        <div ng-controller="pReportController">
+            <div class="container main">
+                <div class="row head">
+                    <div>
+                        Patint Report
+                    </div>
+                    <div class="offset-6">
+                        Shanti Trust
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="mt-3"><strong>Pcc Test Association</strong></div>
+                    <div>400, Winooski Falls Way, Sute 7</div>
+                    <div>Winooske, VT 0504</div>
+                    <div>(+91)-9027113723</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div><strong>{{patient_profile[0].first_name}}</strong></div>
+                        <!-- <div>DOB:{{ur_report.first_name}}</div> -->
+                        <div>Sex:{{patient_profile[0].gender}}</div>
+                        <div class="mt-3"><strong>Sheduled Visit</strong></div>
+                        <div>None</div>
+                    </div>
+                    <div class="col-12 offset-md-4 col-md-4">
+                        <div class="mt-3"><strong>patient Id:{{patient_profile[0].id}}</strong></div>
+                        <div class="mt-5"><strong>Date of Checkup</strong></div>
+                        <div>{{reportPats[0].appointment_id__appointment_date}}</div>
+                    </div>
+                </div><hr>
+                <div class="row mt-5">
+                    <div class="col-12">
+                    <div class="mt-3"><strong>Disease:{{ur_report.first_name}}</strong></div>
+                    <div>Blood Group:{{reportPats[0].blood_group}}</div>
+                    <div>Height:{{reportPats[0].height}}Cm</div>
+                    <div>Weight:{{reportPats[0].Weight}}Kg</div>
+                    <div class="mt-5"><strong>Report Meaasge:</strong></div>
+                    <div>{{reportPats[0].report_message}}</div>
+                    <div class="mt-5"><strong>Prescribed Medicine:</strong></div>
+                    <div>{{reportPats[0].prescribed_medicine}}</div>
+                    </div>
+                </div><hr>
+                <div class="row">
+                    <div class="offset-md-7 col-5">
+                        <div class="mt-3"><strong>Checked by</strong></div>
+                        <div>Dr.{{reportPats[0].appointment_id__doctor_id__first_name}}</div>
+                        <div>{{reportPats[0].appointment_id__doctor_id__email}}</div>
+                    </div>
+                </div>
+                <div class="row head mt-4">
+                    <div>
+                        Patint Report
+                    </div>
+                    <div class="offset-6">
+                        Shanti Trust
+                    </div>
+            </div>
+        </div>
+

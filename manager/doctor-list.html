@@ -1,0 +1,42 @@
+
+    <div ng-controller="sixthController">
+        order By: <select ng-model="shortColumn">
+            <option value="id">id ASC</option>
+            <option value="-id">id DSC</option>
+            <option value="first_name">Name</option>
+            <option value="last_name">Last Name</option>
+            <option value="department">department</option>
+            <option value="previous_exp">Experience</option>
+        </select>
+        Search: <input type="text" placeholder="Search here" ng-model="searchText">
+        <h1>Doctors List</h1>
+        <table id="customers">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone NO</th>
+                    <th>Department</th>
+                    <th>Degree</th>
+                    <th>Experience (years)</th>
+                    <th>Status</th>
+                    <th>Patients</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees | orderBy: shortColumn | filter: searchText">
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.first_name}}</td>
+                    <td>{{employee.last_name}}</td>
+                    <td>{{employee.phone_no}}</td>
+                    <td>{{employee.department}}</td>
+                    <td>{{employee.degree}}</td>
+                    <td>{{employee.previous_exp}}</td>
+                    <td>{{employee.status}}</td>
+                    <td><button class="btn btn-success" value="{{employee.id}}" onclick="SendId(value)" ng-click="allPatientdoctor()" ui-sref="patient-lists">Patients</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

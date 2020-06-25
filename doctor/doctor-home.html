@@ -1,0 +1,92 @@
+<div class="content" ng-controller="home">
+
+    <article class="card card-cascade wider" style="background-color: rgb(218, 226, 226);">
+      <section class="view gradient-card-header purple-gradient overlay d-flex align-items-center justify-content-center pt-2 pb-2">
+        <h3 class="card-header"><strong>Profile</strong></h3>
+      </section>
+
+      <section class="card-body" style="background-color: rgb(234, 241, 243);">
+        <section class="card-deck">
+          <section class="card">
+            <section class="view overlay p-3 text-center">
+              <div class="contaner">
+                <div class="row row-content">
+                  <div class="col-6 col-md-3 mt-3">
+                  <strong> First Name</strong>
+                  </div>
+                  <div class="col-6 col-md-3 mt-3">
+                    {{doctorProfile[0].first_name}}
+                  </div>
+                  <div class="col-6 col-md-3 mt-3">
+                    <strong>Last Name</strong>
+                  </div>
+                  <div class="col-6 col-md-3 mt-3">
+                    {{doctorProfile[0].last_name}}
+                  </div>
+                </div><br>
+                <div class="row row-content">
+                  <div class="col-6 col-md-3 mt-3">
+                   <strong>Phone Number</strong>
+                  </div>
+                  <div class="col-6 col-md-3 mt-3">
+                    {{doctorProfile[0].phone_no}}
+                  </div>
+                  <div class="col-6 col-md-3 mt-3">
+                   <strong> Mail Id</strong>
+                  </div>
+                  <div class="col-6 col-md-3 mt-3">
+                    {{doctorProfile[0].email}}
+                  </div>
+                </div><br>
+                <div class="row row-content">
+                  <div class="col-6 col-md-3 mt-3">
+                  <strong>Degree</strong>
+                  </div>
+                  <div class="col-6 col-md-3 mt-3">
+                    {{doctorProfile[0].degree}}
+                  </div>
+                  <div class="col-6 col-md-3 mt-3">
+                   <strong> Department</strong>
+                  </div>
+                  <div class="col-6 col-md-3 mt-3">
+                    {{doctorProfile[0].department}}
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+        </section>
+      </section>
+    </article>
+
+    <!-- Fourth subject card -->
+    <article class="card card-cascade wider" style="background-color: rgb(218, 226, 226);">
+      <section class="view gradient-card-header peach-gradient overlay d-flex align-items-center justify-content-center pt-2 pb-2">
+        <h3 class="card-header"><strong>Details</strong></h3>
+      </section>
+
+      <section class="card-body" style="background-color: rgb(234, 241, 243);">
+        <section class="card-deck">
+          <section class="card">
+            <section class="view overlay p-3 text-center">
+              <h3 class="pink-text darken-4">
+                <i class="fas fa-file-alt"></i>
+                Patients Request
+              </h3>
+              <p class="card-text">Accept/Reject/Edit</p>
+              <a class="btn btn-danger" ui-sref="patient-rqst()" ng-click="getRqstData()" role="button">View Request</a>
+            </section>
+          </section>
+          <section class="card">
+            <section class="view overlay p-3 text-center">
+              <h3 class="deep-purple-text darken-4">
+                Patient List
+              </h3>
+              <p class="card-text">Everything to know about Patient</p>
+              <a ui-sref="patient-lst()" class="btn btn-danger" ng-click="getpatientList()" role="button">View List</a>
+            </section>
+          </section>
+        </section>
+      </section>
+    </article>
+  </div>

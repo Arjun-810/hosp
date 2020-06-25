@@ -1,0 +1,41 @@
+<div ng-controller="patientListController">
+    order By: <select ng-model="shortColumn">
+        <option value="first_name">Name ASC</option>
+        <option value="last_name">Last Name ASC</option>
+        <option value="email">Email</option>
+        <option value="id">id ASC</option>
+        <option value="-id">id DSC</option>
+    </select>
+    Search: <input type="text" placeholder="Search here" ng-model="searchText">
+    <table class="table">
+        <thead  style="background-color: blueviolet;">
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Mail</th>
+                <th>Problem</th>
+                <th>Appointment Date</th>
+                <th>Appointment Time</th>
+                <th>Send Report</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr ng-repeat="employee in dApprover_list | orderBy: shortColumn | filter: searchText">
+                <td>{{employee.id}}</td>
+                <td>{{employee.patient__first_name}}</td>
+                <td>{{employee.patient__last_name}}</td>
+                <td>{{employee.patient__email}}</td>
+                <td>{{employee.problem}}</td>
+                <td>{{employee.appointment_date}}</td>
+                <td>{{employee.appointment_time}}</td>
+                <td><button class="btn btn-success" onclick="appointId(value)" value="{{employee.id}}">
+                        <a ui-sref="patient-reprt-form()">
+                            Send Report</a></button> </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>

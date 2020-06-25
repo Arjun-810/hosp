@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row justify-content-md-center">
+      <div class="doc-login fat">
+        <div class="doc-login-body">
+          <h4 class="doc-login-title"><strong>Doctor Login</strong></h4>
+          <div>
+            <div>
+              <div style="text-align: center; color: darkgray;"><i class="fas fa-user-circle"></i> Usernmae</div>
+              <input type="email" class="inp mt-2" id="username" name="email" value="">
+            </div>
+
+            <div class="mt-4">
+              <div for="password" style="text-align: center; color: darkgray;"><i class="fas fa-unlock-alt"></i>
+                Password</div>
+              <input id="pass_code" type="text" class="mt-2 inp" id="pass_code">
+            </div>
+
+            <div>
+              <div class="custom-checkbox custom-control">
+                <input type="checkbox" name="remember" id="remember" class="custom-control-input">
+                <div for="remember" class="custom-control-label mt-3">Remember Me</div>
+              </div>
+              
+            </div>
+
+            <div class="mt-5">
+              <button class="btn btn-block btn-warning" type="button" onclick="submitfun()">LogIn</button>
+
+            </div>
+
+            <div class="mt-4 text-center">
+              Don't have an account? <a ui-sref="patient-rgister()">Create One</a>
+            </div>
+            <div class="mt-4 text-center">
+              <a ui-serf="Home()">Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

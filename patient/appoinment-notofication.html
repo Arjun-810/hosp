@@ -1,0 +1,10 @@
+<div ng-controller="notificationController" onchange="load()"></div>
+<h1>Notification Regarding Appointment</h1>
+        status: 
+       <div id="there">{{appData[0].status}}</div>
+       <div>Appointment Date: {{appData[0].appointment_date}}</div>
+       <div>Appointment Time: {{appData[0].appointment_time}}</div>
+    <button class="btn btn-primary" value="{{appData[0].status}}" id="{{appData[0].status}}" ng-click="SendToDr()">Pay Your Amount</button>
+    </tbody>
+</table>
+</div>

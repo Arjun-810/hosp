@@ -1,0 +1,18 @@
+.head1{
+    text-align: left;
+}
+.head2{
+    text-align: center;
+}
+.main{
+    background-color: honeydew;
+    padding: 30px;
+}
+.head{
+    background-color: mediumaquamarine;
+    padding: 10px;
+}
+.center{
+    text-align: center;
+    font-size: 110%;
+}

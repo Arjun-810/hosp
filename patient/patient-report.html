@@ -1,0 +1,36 @@
+
+    <div ng-controller="reportController">
+        order By: <select ng-model="shortColumn">
+            <option value="id">id ASC</option>
+            <option value="-id">id DSC</option>
+            <option value="appointment_id__doctor_id__first_name">Name</option>
+            <option value="appointment_id__appointment_date">Appointment Date</option>
+            <option value="appointment_id__appointment_time">Appointment Time</option>
+        </select>
+        Search: <input type="text" placeholder="Search here" ng-model="searchText">
+        <h1>Checkup Report</h1>
+        {{error}}
+        <table id="customers">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Doctor's Name</th>
+                    <th>Doctor's Mail</th>
+                    <th>Appointment Date</th>
+                    <th>Appointment Time</th>
+                    <th>View Report</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in appDatas | orderBy: shortColumn | filter: searchText">
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.appointment_id__doctor_id__first_name}}</td>
+                    <td>{{employee.appointment_id__doctor_id__phone_no}}</td>
+                    <td >{{employee.appointment_id__appointment_date}}</td>
+                    <td>{{employee.appointment_id__appointment_time}}</td>
+                    <td><button type="btn" ui-sref="report()" class="btn btn-primary" value="{{employee}}" onclick="sendReprt(value)">view Report</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+

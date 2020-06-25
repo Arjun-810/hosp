@@ -1,0 +1,117 @@
+<section ng-controller="seventhController">
+    <div class="container">
+        <div class="row justify-content-md-center">
+                <div class="card fat">
+                    <div class="card-body">
+                        <h4 class="card-title"><i class="far fa-registered fa-2x"></i>Doctor Registration</h4>
+                        <div>
+                            <div class="row row-content">
+                            <div class="col-12 col-md-6 mt-4">
+                                <div for="First_name" class="nam"><i class="fas fa-user-circle"></i> First Name</div>
+                                <input type="text" class="inp mt-2" id="firstNameRegDoc" ng-model="docRegFnam" required>
+                                <br><span style="color: red;" id="docFnamMsg"></span>
+                            </div>
+                            <div class="col-12 col-md-6 mt-4">
+                                <div for="Last_name" class="nam"><i class="far fa-user"></i> Last Name</div>
+                                <input type="text1" class="inp mt-2" id="lastNameRegDoc" ng-model="docRegLnam" required>
+                                <br><span style="color: red;" id="docLnamMsg"></span>
+                            </div>
+                            </div>
+                            <div class="row row-content">
+                                <div class="col-12 col-md-6 mt-4">
+                                    <div for="email" class="nam"><i class="fas fa-envelope-square"></i> Email</div>
+                                    <input type="email" class="inp mt-2" id="mailRegDoc" ng-model="docRegMail" required>
+                                    <br><span style="color: red;" id="docMailMsg"></span>
+                                </div>
+                                <div class="col-12 col-md-6 mt-4">
+                                    <div for="Mobile_no" class="nam"><i class="fas fa-phone"></i> Mobile No.</div>
+                                    <input type="text" class="inp mt-2" ng-model="docRegMobNo" id="mobRegDoc" required>
+                                    <br><span style="color: red;" id="docmobMsg"></span>
+                                </div>
+                            </div>
+                            <div class="row row-content">
+                                <div class="col-12 col-md-6 mt-4">
+                                    <div for="password" class="nam"><i class="fas fa-key"></i> password</div>
+                                    <input type="text" class="inp mt-2" ng-model="docRegPassword" id="pswrdRegDoc1" required>
+                                    <br><span style="color: red;" id="docpassMsg1"></span>
+                                </div>
+                                <div class="col-12 col-md-6 mt-4">
+                                    <div for="password" class="nam"><i class="fas fa-key"></i> Conform Password</div>
+                                    <input type="text" class="inp mt-2" id="pswrdRegDoc2" required>
+                                    <br><span style="color: red;" id="docpassMsg2"></span>
+                                </div>
+                            </div>
+                            <div class="row row-content">
+                                <div class="col-12 col-md-6 mt-4">
+                                    <div for="Age" class="nam"><i class="fas fa-user-clock"></i> Age</div>
+                                    <input type="number" class="inp mt-2" ng-model="docRegAge" id="ageRegDoc" required>
+                                    <br><span style="color: red;" id="docageMsg"></span>
+                                </div>
+                                <div class="col-12 col-md-6 mt-4">
+                                    <div for="Gender" class="nam"><i class="far fa-thumbs-up"></i> Gender</div>
+                                    <select name="gender" ng-model="docRegGender" id="gender" class="mt-2">
+                                        <option value="select">-Select gender-</option>
+                                        <option value="male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="other">other</option>
+                                      </select>
+                                      
+                                </div>
+                            </div>
+                            <div class="row row-content">
+                                <div class="col-12 col-md-6 mt-4">
+                                    <div for="degree" class="nam"><i class="fas fa-user-clock"></i> Degree</div>
+                                    <input type="text" class="inp mt-2" ng-model="docRegDegree" id="degreeRegDoc" required>
+                                    <br><span style="color: red;" id="docdegreeMsg"></span>
+                                </div>
+                                <div class="col-12 col-md-6 mt-4">
+                                    <div for="Gender" class="nam"><i class="far fa-thumbs-up"></i> Department</div>
+                                    <select name="gender" ng-model="docRegDepartment" id="genderRegDoc" class="mt-2">
+                                        <option value="select">-Select Department-</option>
+                                        <option value="Bons">Bons</option>
+                                        <option value="Eye">Eye</option>
+                                        <option value="Cardiologist">Cardiologist</option>
+                                        <option value="Dentist">Dentist</option>
+                                      </select>
+                                      <br><span style="color: red;" id="docgenderMsg"></span>
+                                      
+                                </div>
+                            </div>
+                            <div class="row row-content">
+                                <div class="col-12 col-md-6 mt-4">
+                                    <div for="address`" class="nam"><i class="fas fa-key"></i> Address</div>
+                                    <input type="text" class="inp mt-2" ng-model="docRegAddress" id="addressRegDoc" required>
+                                    <br><span style="color: red;" id="docaddressMsg"></span>
+                                </div>
+                                <div class="col-12 col-md-6 mt-4">
+                                    <div for="experience" class="nam"><i class="fas fa-key"></i> Experience</div>
+                                    <input type="number" class="inp mt-2" id="expRegDoc" ng-model="docRegExp" required>
+                                    <br><span style="color: red;" id="docexpMsg"></span>
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <!-- <input class="btn btn-block btn-warning" type="button" onclick="validation()">Register</input> -->
+                                <input class="btn btn-block btn-warning" type="submit" name="submit" value="Register" onclick="regdoctor()" ng-click="doctorRegistration(docRegMail, docRegMobNo, docRegPassword, docRegAge, docRegGender, docRegAddress, docRegDegree, docRegExp, docRegDepartment, docRegFnam, docRegLnam)">
+                            </div>
+                            <div class="col-12">
+                                <p class="result" style="color:green"></p> 
+
+                            </div>
+                            
+                            <div class="mt-4 text-center">
+                                <p>or open with</p>
+                                <i style="color: blue; margin-right: 10px;" class="fab fa-facebook-f fa-1x"></i><i class="fab fa-google fa-1x"></i><i style="color: rgb(163, 163, 219); margin-left: 10px;" class="fab fa-twitter"></i>
+                            </div>
+
+                            <div class="mt-4 text-center">
+                                Alredy have an account? <a ui-sref="patient-login()">Login</a>
+                            </div>
+                            <div class="mt-4 text-center">
+                                Back to <a ui-sref="Home()">Home</a> Page
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

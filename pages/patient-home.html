@@ -1,0 +1,73 @@
+<section class="sec-2" ng-controller="HomeController">
+    <h2 style="padding: 20px;"><strong>Patient Dashbord</strong></h2>
+    <div class="row mt-2">
+    <div class="col-10 col-md-5 Dashbord" style="margin-top: 20px;">
+        <h3 class="profile"><strong>Authentic Profile</strong></h3>
+        <div class="sepration"></div>
+        <div class="row row-content">
+            <div class="col-12 col-md-3">
+                <img src="/css/images/avat-01-512.webp" class="img-fluid mt-3">
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-12 col-md-3 mt-2"><b>Name:</b></div>
+                    <div class="col-12 col-md-6 mt-2">{{patient_profile[0].first_name}} {{patient_profile[0].last_name}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-3 mt-2"><b>Patient Id:</b></div>
+                    <div class="col-12 col-md-6 mt-2">{{patient_profile[0].id}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-3 mt-2"><b>Age:</b></div>
+                    <div class="col-12 col-md-6 mt-2">{{patient_profile[0].age}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-3 mt-2"><b>Gender:</b></div>
+                    <div class="col-12 col-md-6 mt-2">{{patient_profile[0].gender}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-3 mt-2"><b>Phone:</b></div>
+                    <div class="col-12 col-md-6 mt-2">{{patient_profile[0].phone_no}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-3 mt-2"><b>Status:</b></div>
+                    <div class="col-12 col-md-6 mt-2">This account is verified</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-10 col-md-5 offset-1 Dashbord D2" style="margin-top: 20px;">
+        <h3 class="profile">Book Appointment</h3>
+        <div class="sepration"></div>
+        <div class="D2">
+            <h4 class="mt-2"><b>Doctors</b></h4>
+            <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+            <h4 class="mt-2"><b>Doctors</b></h4>
+            <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis doloremque officia nesciunt, sint delectus.</div>
+            <button type="button" ui-sref="appoinment-patient()" class="btn btn-dash mt-2" value="">Book an Appointment</button>
+            </div>
+    </div>
+    <div class="col-10 col-md-5 Dashbord mt-5">
+        <h3 class="profile">Patient Reports</h3>
+        <div class="sepration"></div>
+        <div class="D2">
+        <h4 class="mt-2"><b>Doctors</b></h4>
+        <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <h4 class="mt-2"><b>Doctors</b></h4>
+        <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis doloremque officia nesciunt, sint delectus.</div>
+        <button type="button" class="btn btn-dash mt-2" ui-sref="patient-report()" value="">See Reports</button>
+        </div>
+        </div>
+        <div class="col-10 col-md-5 Dashbord mt-5">
+            <h3 class="profile">Appoinment Notification </h3>
+            <div class="sepration"></div>
+            <div class="D2">
+            <h4 class="mt-2"><b>Doctors</b></h4>
+            <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+            <h4 class="mt-2"><b>Doctors</b></h4>
+            <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis doloremque officia nesciunt, sint delectus.</div>
+            <button type="button" class="btn btn-dash mt-2" ui-sref="appoinment-notification()" value="">See Notofication</button>
+            </div>
+            </div>
+            </div>
+</section>

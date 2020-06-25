@@ -1,0 +1,95 @@
+    <section ng-controller="firstController">
+        <div class="container">
+			<div class="row justify-content-md-center">
+					<div class="card fat">
+						<div class="card-body">
+							<h4 class="card-title"><i class="far fa-registered fa-2x"></i>Patient Registration</h4>
+							<div>
+                                <div class="row row-content">
+								<div class="col-12 col-md-6 mt-4">
+									<div for="First_name"><i class="fas fa-user-circle"></i> First Name</div>
+                                    <input type="text" class="inp mt-2" id="patientFnamReg" ng-model="pregfnam" placeholder="Enter First name" required>
+                                    <br><span style="color: red;" id="patientFnamMsg"></span>
+                                </div>
+                                <div class="col-12 col-md-6 mt-4">
+									<div for="Last_name"><i class="far fa-user"></i> Last Name</div>
+                                    <input type="text1" class="inp mt-2" id="patientLnamReg" placeholder="Enter Last name" ng-model="preglnam" required>
+                                    <br><span style="color: red;" id="patientLnamMsg"></span>
+                                </div>
+                                </div>
+                                <div class="row row-content">
+                                    <div class="col-12 col-md-6 mt-4">
+                                        <div for="email"><i class="fas fa-envelope-square"></i> Email</div>
+                                        <input type="email" class="inp mt-2" id="patientmailReg" ng-model="pregmail" placeholder="Enter Mail id" required>
+                                        <br><span style="color: red;" id="patientmailMsg"></span>
+                                    </div>
+                                    <div class="col-12 col-md-6 mt-4">
+                                        <div for="Mobile_no"><i class="fas fa-phone"></i> Mobile No.</div>
+                                        <input type="text" class="inp mt-2" id="patientmobReg" ng-model="pregmob" placeholder="Enter Contact number" required>
+                                        <br><span style="color: red;" id="patientmobMsg"></span>
+                                    </div>
+                                </div>
+                                <div class="row row-content">
+                                    <div class="col-12 col-md-6 mt-4">
+                                        <div for="password"><i class="fas fa-key"></i> password</div>
+                                        <input type="text" class="inp mt-2" id="patientpswrdReg1" ng-model="pregpswrd" placeholder="Set a Password" required>
+                                        <br><span style="color: red;" id="patientpswrdMsg1"></span>
+                                    </div>
+                                    <div class="col-12 col-md-6 mt-4">
+                                        <div for="password"><i class="fas fa-key"></i> Conform Password</div>
+                                        <input type="text" class="inp mt-2" id="patientpswrdReg2"  placeholder="Conform password" required>
+                                        <br><span style="color: red;" id="patientpswrdMsg2"></span>
+                                    </div>
+                                </div>
+                                <div class="row row-content">
+                                    <div class="col-12 col-md-6 mt-4">
+                                        <div for="Age"><i class="fas fa-user-clock"></i> Age</div>
+                                        <input type="number" class="inp mt-2" id="patientageReg" ng-model="pregage" placeholder="Enter your age" required>
+                                        <br><span style="color: red;" id="patientageMsg"></span>
+                                    </div>
+                                    <div class="col-12 col-md-6 mt-4">
+                                        <div for="Gender"><i class="far fa-thumbs-up"></i> Gender</div>
+                                        <select name="gender" id="gender" ng-model="preggender" class="mt-2">
+                                            <option value="select">-Select gender-</option>
+                                            <option value="male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="other">other</option>
+                                          </select>
+                                          
+                                    </div>
+                                </div>
+                                <div class="row row-content">
+                                    <div class="col-12 col-md-4 mt-4">
+                                        <div for="Problem"><i class="fas fa-ambulance"></i> Address</div>
+                                    </div>
+                                    <div class="col-12 col-md-8 mt-4">
+                                        <input type="text" class="inp mt-2" id="patientaddressReg" ng-model="pregaddress" placeholder="Enter your problem" required>
+                                        <br><span style="color: red;" id="patientaddressMsg"></span>
+                                    </div>
+                                </div>
+								<div class="mt-5">
+                                    <!-- <input class="btn btn-block btn-warning" type="button" onclick="validation()">Register</input> -->
+                                    <input class="btn btn-block btn-warning" type="submit" name="submit" value="Register" onclick="patientRegFunc()" ng-click="patientRegisteration(pregmail, pregmob, pregpswrd, pregage, pregaddress, preggender, pregfnam, preglnam)">
+                                </div>
+                                <div class="col-12">
+                                    <p class="result" style="color:green"></p> 
+
+                                </div>
+                                
+								<div class="mt-4 text-center">
+                                    <p>or open with</p>
+                                    <i style="color: blue; margin-right: 10px;" class="fab fa-facebook-f fa-1x"></i><i class="fab fa-google fa-1x"></i><i style="color: rgb(163, 163, 219); margin-left: 10px;" class="fab fa-twitter"></i>
+								</div>
+
+								<div class="mt-4 text-center">
+									Alredy have an account? <a ui-sref="patient-login()">Login</a>
+                                </div>
+                                <div class="mt-4 text-center">
+									Back to <a ui-sref="Home()">Home</a> Page
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>

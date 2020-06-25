@@ -1,0 +1,54 @@
+
+	<div ng-controller="fifthController" class="bg">
+		<div class="container">
+			<div class="row justify-content-md-center">
+					<div class="card fat">
+						<div class="card-body">
+							<h4 class="card-title"><b>Doctor Login</b></h4>
+							<div>
+								<div>
+									<div for="email"><i class="fas fa-user-circle"></i> Usernmae</div>
+									<input type="email" class="inp mt-2" id="docLoginUserNam" name="email" value="" onfocusout="docLoginUserNam()" ng-model="email">
+									<br><span style="color: red;" id="docLoginUserMsg"></span>
+
+								</div>
+
+								<div class="mt-4">
+									<div for="password"><i class="fas fa-unlock-alt"></i> Password
+										<a href="#" class="float-right">
+											Forgot Password?
+										</a>
+									</div>
+									<input  type="text" class="mt-2 inp" id="docLoginUserpswrd" onfocusout="docLoginUserpswrd()" ng-model="password">
+									<br><span style="color: red;" id="docLoginUserpswrdMsg"></span>
+								</div>
+
+								<div>
+									<div class="custom-checkbox custom-control">
+										<input type="checkbox" name="remember" id="remember" class="custom-control-input">
+										<div for="remember" class="custom-control-label mt-3">Remember Me</div>
+									</div>
+								</div>
+
+								<div class="mt-5">
+                                    <button class="btn btn-block btn-warning" type="button" ng-click="postdoctordata(email,password)">LogIn</button>
+
+                                </div>
+                                
+								<!-- <div class="mt-4 text-center">
+                                    <p>or login with</p>
+                                    <i style="color: blue; margin-right: 10px;" class="fab fa-facebook-f fa-1x"></i><i class="fab fa-google fa-1x"></i><i style="color: rgb(163, 163, 219); margin-left: 10px;" class="fab fa-twitter"></i>
+								</div> -->
+
+								<div class="mt-4 text-center">
+									Don't have an account? <a ui-sref="doctor-registration()">Create One</a>
+								</div>
+								<div class="mt-4 text-center">
+									Back to <a ui-sref="Home()">Home</a> Page
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,48 @@
+<div ng-controller="patientRqst">
+    order By: <select ng-model="shortColumn">
+        <option value="first_name">Name ASC</option>
+        <option value="last_name">Last Name ASC</option>
+        <option value="email">Email</option>
+        <option value="id">id ASC</option>
+        <option value="-id">id DSC</option>
+    </select>
+    Search: <input type="text" placeholder="Search here" ng-model="searchText">
+    <table class="table" id="customers">
+    <table class="table" id="customers">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone no.</th>
+                <th>Problem</th>
+                <th>Existing Disease</th>
+                <th>Appointment Date</th>
+                <th>Appointment Time</th>
+                <th>Accepet Request</th>
+                <th>Cancel Request</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr ng-repeat="docRqst in drPData | orderBy: shortColumn | filter: searchText">
+                <td>{{docRqst.id}}</td>
+                <td>{{docRqst.patient__first_name}}</td>
+                <td>{{docRqst.patient__last_name}}</td>
+                <td>{{docRqst.patient__phone_no}}</td>
+                <td>{{docRqst.problem}}</td>
+                <td>{{docRqst.existing_disease}}</td>
+                <td>{{docRqst.appointment_date}}</td>
+                <td>{{docRqst.appointment_time}}</td>
+                <td><button class="btn btn-success" onclick="appId1(value)" value="{{docRqst.id}}" ng-click="acceptFinalRqst()">
+                            Accept Request</button> </td>
+                <td>
+                    <button class="btn btn-primary" id="test2" onclick="appId2(value)" value="{{docRqst.id}}" ui-sref="reject-rqst()">
+                            Reject Request
+                    </button> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</table>
+</div>

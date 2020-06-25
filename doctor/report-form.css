@@ -1,0 +1,13 @@
+.header{
+    text-align: center;
+}
+.main-box{
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    /* font-size: 120%; */
+    background: rgb(230,236,234);
+    background: linear-gradient(90deg, rgba(230,236,234,1) 13%, rgba(212,224,224,1) 42%);
+/* font-family: 'Poppins', sans-serif; */
+
+}

@@ -1,0 +1,22 @@
+
+    <div ng-controller="secondController">
+        <h1>Patients Rejected Request</h1>
+        {{error}}
+        <table id="customers">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User name</th>
+                    <th>Mail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.title}}</td>
+                    <td>{{employee.body}}</td>
+                    {{employee}}
+                </tr>
+            </tbody>
+        </table>
+    </div>

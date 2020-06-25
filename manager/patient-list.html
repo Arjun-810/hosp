@@ -1,0 +1,35 @@
+
+    <div ng-controller="thirdController">
+        order By: <select ng-model="shortColumn">
+            <option value="patient_id">id ASC</option>
+            <option value="-patient_id">id DSC</option>
+            <option value="patient__first_name">Name</option>
+            <option value="patient__last_name">Last Name</option>
+        </select>
+        Search: <input type="text" placeholder="Search here" ng-model="searchText">
+        <h1>Doctors List</h1>
+        <table id="customers">
+            <thead>
+                <tr>
+                    <th>Patient ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone NO</th>
+                    <th>Email</th>
+                    <th>Address</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in patientss | orderBy: shortColumn | filter: searchText">
+                    <td>{{employee.patient_id}}</td>
+                    <td>{{employee.patient__first_name}}</td>
+                    <td>{{employee.patient__last_name}}</td>
+                    <td>{{employee.patient__phone_no}}</td>
+                    <td>{{employee.patient__email}}</td>
+                    <td>{{employee.patient__address}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
